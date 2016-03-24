@@ -3,8 +3,10 @@
   top: 0;
   left: 0;
   width: 5em;
+  /* upphaflega width: 5em; */
   height: 5em;
-  background: blue;
+  /* upphaflega height: 5em; */
+  background: black;
 }
 
 .Scoreboard {
@@ -16,7 +18,8 @@
   margin-left: -20em;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: purple;
+  background-image: url('/images/scoreboard.png');
+  background-size: 100% 100%;
   text-align: center;
   -webkit-transform: translate(0, -40em);
   -webkit-transition: -webkit-transform 0.5s;
@@ -34,7 +37,7 @@
   margin-top: 20em;
   font-size: inherit;
   padding: 0.4em 1.5em;
-  border: 0.2em solid white;
+  border: 0.2em solid black;
   background: none;
   cursor: pointer;
 }
@@ -42,7 +45,7 @@
 .Scoreboard-restartText {
   font-family: 'Comic Sans MS', serif;
   font-size: 2.4em;
-  color: white;
+  color: black;
 }
 
 body {
@@ -66,5 +69,17 @@ body {
   margin-left: -51.2em;
   margin-top: -28.8em;
   overflow: hidden;
-  background: red;
+  background-image: url('/images/background.png');
+}
+
+.Ground {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 112.4em;
+  height: 57.6em;
+  margin-left: -51.2em;
+  margin-top: 21.8em;
+  overflow: hidden;
+  background-image: url('/images/ground.png');
 }
