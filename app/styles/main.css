@@ -88,4 +88,15 @@ background: black;
 	background-image: url('/images/ground.png');
 
 }
+.Cloud {
+	position: absolute;
+	top: 10%;
+	left: 100%;
+	right: 0;
+	width: 20em;
+	height: 12em;
+	background-image: url('/images/ballons.png');
+	overflow: hidden;
+	/*background-size: 10em 10em;*/
+}
 
