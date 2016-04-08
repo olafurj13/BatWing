@@ -105,7 +105,6 @@ body {
   overflow: hidden;
   /*background-size: 10em 10em;*/
 }
-
 .#muter {
   left: 50%;
   top: 50%;
@@ -114,4 +113,28 @@ body {
   margin-left: -51.2em;
   margin-top: -28.8em;
   width: auto;
+}
+.PipeTop {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  right: 0;
+  width: 4em;
+  height: 20em;
+  background-image: url('/images/pipes.png');
+  overflow: hidden;
+  /*background-size: 10em 10em;*/
+}
+
+.PipeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  width: 4em;
+  height: 12em;
+  background-image: url('/images/pipes.png');
+  overflow: hidden;
+  /*background-size: 10em 10em;*/
+>>>>>>> c56b00bc1fc729a9aa2de2816bff0e9c4a697cdc
 }

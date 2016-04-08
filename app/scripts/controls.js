@@ -24,6 +24,7 @@ window.Controls = (function() {
         $(window)
             .on('keydown', this._onKeyDown.bind(this))
             .on('keyup', this._onKeyUp.bind(this));
+
     };
 
     Controls.prototype._onKeyDown = function(e) {
@@ -48,6 +49,7 @@ window.Controls = (function() {
             return false;
         }
     };
+
 
     /**
      * Only answers true once until a key is pressed again.
