@@ -105,3 +105,27 @@ body {
   overflow: hidden;
   /*background-size: 10em 10em;*/
 }
+
+.PipeTop {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  right: 0;
+  width: 4em;
+  height: 20em;
+  background-image: url('/images/pipes.png');
+  overflow: hidden;
+  /*background-size: 10em 10em;*/
+}
+
+.PipeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  width: 4em;
+  height: 12em;
+  background-image: url('/images/pipes.png');
+  overflow: hidden;
+  /*background-size: 10em 10em;*/
+}
