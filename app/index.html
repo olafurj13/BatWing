@@ -28,6 +28,12 @@
             <div class="Player"></div>
             <div class="Ground"></div>
             <div class="Cloud"></div>
+            <div class="GameMusic">
+                <audio id="backgroundMusic" controls loop autoplay hidden>
+                    <source src="/audio/BatWing!.mp3" type="audio/mpeg">
+                </audio> 
+                <img id="muter" src="" onclick="mute()"/>
+        </div>
             
             <div class="Scoreboard">
                 <button class="Scoreboard-restart">
@@ -35,12 +41,7 @@
                 </button>
             </div>
         </div>
-        <div class="GameMusic">
-                <audio id="backgroundMusic" controls loop autoplay hidden>
-                    <source src="/audio/BatWing!.mp3" type="audio/mpeg">
-                </audio> 
-                <!-- <img id="muteButton" src="images/mute.png" onclick="mute()"/> -->
-        </div>
+     
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
