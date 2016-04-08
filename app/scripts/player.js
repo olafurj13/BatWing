@@ -30,7 +30,7 @@ window.Player = (function() {
 		if (Controls.keys.space) {
 			this.pos.y -= 1.5 ;
 		}else {
-			this.pos.y += 0.2;
+			this.pos.y += 0.8;
 		}
 
 		this.checkCollisionWithBounds();

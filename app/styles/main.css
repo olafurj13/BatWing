@@ -2,9 +2,19 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 5em;        /* upphaflega width: 5em; */
-	height: 5em;       /* upphaflega height: 5em; */
-	background: black;
+	width: 12em;        /* upphaflega width: 5em; */
+	height: 6em;       /* upphaflega height: 5em; */
+	background-image: url('/images/batwing.png');
+}
+
+.Pipe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 12em;
+	height: 92em;
+	background-image: url('/images/pipes.png');
+	background-size: 12em 92em;
 }
 
 .Scoreboard {
