@@ -1,21 +1,22 @@
-window.Ground = (function() {
+window.Cloud = (function() {
 	'use strict';
-	console.log("GROUND");
+	console.log("Cloud");
 
 	// All these constants are in em's, multiply by 10 pixels
 	// for 1024x576px canvas.
-	var SPEED = 15; // * 10 pixels per second
+	var SPEED = 30; // * 10 pixels per second
 
-	var Ground = function(el, game) {
+	var Cloud = function(el, game) {
 		this.el = el;
 		this.game = game;
 		this.pos = { x: 0, y: 0 };
 		console.log("GROUND2");
 	};
 
-	Ground.prototype.onFrame = function(delta) {
+	Cloud.prototype.onFrame = function(delta) {
 		this.pos.x -= delta * SPEED;
-		if(this.pos.x <= -10){
+		console.log("GROUND3");
+		if(this.pos.x <= -120){
 			this.pos.x = 0;
 			console.log("GROUND4");
 		}
@@ -26,6 +27,6 @@ window.Ground = (function() {
 	};
 
 
-	return Ground;
+	return Cloud;
 
 })();

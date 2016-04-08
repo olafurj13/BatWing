@@ -12,7 +12,8 @@ window.Game = (function() {
 		this.el = el;
 		this.player = new window.Player(this.el.find('.Player'), this);
 		this.ground = new window.Ground(this.el.find('.Ground'), this);
-		this.pipe = new window.Pipe(this.el.find('Pipe'), this, 1);
+		this.cloud = new window.Cloud(this.el.find('.Cloud'), this);
+		//this.pipe = new window.Pipe(this.el.find('Pipe'), this, 1);
 		this.isPlaying = false;
 
 		//var fontSize = Math.min(
@@ -43,7 +44,8 @@ window.Game = (function() {
 		// Update game entities.
 		this.player.onFrame(delta);
 		this.ground.onFrame(delta);
-		this.pipe.onFrame(delta);
+		this.cloud.onFrame(delta);
+		//this.pipe.onFrame(delta);
 
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
