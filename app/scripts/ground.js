@@ -1,6 +1,5 @@
 window.Ground = (function() {
 	'use strict';
-	console.log("GROUND");
 
 	// All these constants are in em's, multiply by 10 pixels
 	// for 1024x576px canvas.
@@ -10,14 +9,12 @@ window.Ground = (function() {
 		this.el = el;
 		this.game = game;
 		this.pos = { x: 0, y: 0 };
-		console.log("GROUND2");
 	};
 
 	Ground.prototype.onFrame = function(delta) {
 		this.pos.x -= delta * SPEED;
 		if(this.pos.x <= -10){
 			this.pos.x = 0;
-			console.log("GROUND4");
 		}
 		
 
