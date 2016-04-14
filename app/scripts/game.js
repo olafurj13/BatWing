@@ -13,8 +13,10 @@ window.Game = (function() {
 		this.player = new window.Player(this.el.find('.Player'), this);
 		this.ground = new window.Ground(this.el.find('.Ground'), this);
 		this.cloud = new window.Cloud(this.el.find('.Cloud'), this);
-		this.pipeTop = new window.Pipe(this.el.find('.PipeTop'), this, 13);
-		this.pipeBottom = new window.Pipe(this.el.find('.PipeBottom'), this, 23);
+		this.pipeTop = new window.Pipe(this.el.find('.PipeTop'), this, 1);
+		this.pipeBottom = new window.Pipe(this.el.find('.PipeBottom'), this, 2);
+		this.pipeTop2 = new window.Pipe(this.el.find('.PipeTop'), this, 1);
+		this.pipeBottom2 = new window.Pipe(this.el.find('.PipeBottom'), this, 2);
 		//console.log('PipeTop: ', this.pipeTop);
 		//console.log('PipeBottom: ',this.pipeBottom);
 
@@ -52,6 +54,8 @@ window.Game = (function() {
 		this.cloud.onFrame(delta);
 		this.pipeTop.onFrame(delta);
 		this.pipeBottom.onFrame(delta);
+		//this.pipeTop2.onFrame(delta-0.2);
+		//this.pipeBottom2.onFrame(delta-0.2);
 		//this.pipe.onFrame(delta);
 
 		// Request next frame.
