@@ -30,16 +30,15 @@ window.Player = (function() {
 		$('.score').html(this.score);
 	};
 
+
 	Player.prototype.onFrame = function(delta, gameStarted) {
 		if(gameStarted){
 			if(Controls.keys.space){
-				this.pos.y -= 1.2;
+				this.pos.y -= 0.4;
 			}else {
-				this.pos.y += 0.9;
+				this.pos.y += 0.4;
 			}
 		} else {
-			//this will make rayman float in the air if he has not started
-
 			var start = this.game.WORLD_HEIGHT/2 + 3;
 		}
 

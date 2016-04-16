@@ -17,6 +17,11 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+           <div class= "PlayerSound">
+                  <audio id="flapMusic">
+                    <source src="/audio/flap.wav" type="audio/wav">
+                </audio> 
+            </div>
         <!-- endbuild -->
     </head>
     <body>
@@ -25,7 +30,9 @@
         <![endif]-->
 
         <div class="GameCanvas">
-            <div class="Player"></div>
+            <div class="Player">
+                <div class="Wings"></div>
+            </div>
             <div class="Ground"></div>
             <div class="Cloud"></div>
 

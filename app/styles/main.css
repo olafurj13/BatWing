@@ -2,9 +2,21 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 12em;        /* upphaflega width: 5em; */
-	height: 6em;       /* upphaflega height: 5em; */
+	width: 6em;        /* upphaflega width: 5em; */
+	height: 3em;       /* upphaflega height: 5em; */
+	background-image: url('/images/Body.png');
+
+}
+
+.Wings {
+	position: absolute;
+	left: -1.5em;
+	top: 0;
+	height: 4em;
+	width: 6em;
 	background-image: url('/images/batwing.png');
+	transform-origin: 6em 2em;
+	animation: 0.2s flap alternate infinite;
 }
 
 .Pipe {
