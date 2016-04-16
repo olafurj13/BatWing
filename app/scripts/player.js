@@ -27,7 +27,7 @@ window.Player = (function() {
 		this.pos.x = INITIAL_POSITION_X;
 		this.pos.y = INITIAL_POSITION_Y;
 		this.points = 0;
-		$('.score').html(this.score);
+		$('.score').html(this.points);
 	};
 
 
@@ -36,7 +36,7 @@ window.Player = (function() {
 			if(Controls.keys.space){
 				this.pos.y -= 0.4;
 			}else {
-				this.pos.y += 0.4;
+				this.pos.y += 0.6;
 			}
 		} else {
 			var start = this.game.WORLD_HEIGHT/2 + 3;
@@ -52,10 +52,10 @@ window.Player = (function() {
 		if (this.pos.x < 0 ||
 			this.pos.x + WIDTH > this.game.WORLD_WIDTH ||
 			this.pos.y < 0 ||
-			this.pos.y + HEIGHT > this.game.WORLD_HEIGHT - 6.8) {
+			this.pos.y + HEIGHT > this.game.WORLD_HEIGHT - 4.6) {
 			return this.game.gameover();
 		}
-	};
+	};	
 
 	return Player;
 

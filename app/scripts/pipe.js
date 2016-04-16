@@ -14,55 +14,49 @@ window.Pipe = (function() {
 		this.pos = { x: 0, y: 0 };
 		this.number = number;
 		this.player = game.player;
-		this.points = 0;
 		this.PlayerPassedPipe = false;
 	};
 
 	Pipe.prototype.reset = function(){
 		this.pos.x = this.game.WORLD_WIDTH;
 		this.pos.y = 0;
-		this.points = 0;
 		counter2 = 0;
 	};
 
 	Pipe.prototype.checkCollision = function(pos){
 		//console.log('Player pos y: ', this.player.pos.y);
 		//console.log('Pipe   pos y: ', pos.y);
-		if(this.player.pos.x+12 > pos.x && pos.x > 25){
+		if(this.player.pos.x + 6 > pos.x && pos.x > 25){
 			//	console.log('game over');
 			counter2 = 0;
 			
 			//Sér um hvort það sé collision við efri pípu
 			if(this.player.pos.y - 23 > pos.y - 5.5){
 				//Sér um hvort það sé collision við neðri pípu	
-				if(this.player.pos.y < pos.y + 32){
+				if(this.player.pos.y < pos.y + 34){
 
 				} else {
 					// console.log('this.player.y: ', this.player.pos.y);
 					// console.log('this.pos.y   : ', pos.y + 32);
 					// console.log('dey i seinni');
 					this.game.gameover();
-					console.log('Points 1: ', this.points-1);
 				}
 			} else {
 				// console.log('this.player.y: ', this.player.pos.y - 23);
 				// console.log('this.pos.y   : ', pos.y - 5.5);
 				// console.log('dey i fyrstu');
 				this.game.gameover();
-				console.log('Points 2: ', this.points-1);
 			}
 			//this.game.gameover();
 		} else {
 			counter2++;
 			if(counter2 === 1){
-				this.points++;
+				$('.score').html(this.player.points);
+				this.player.points++;
 			}
 		}
 	}
 
-	Pipe.prototype.score = function(delta) {
-		this.points++;
-	}
 
 	Pipe.prototype.onFrame = function(delta, gameStarted) {
 		if(gameStarted){

@@ -107,9 +107,9 @@ window.Game = (function() {
 					scoreboardEl.removeClass('is-visible');
 					that.start();
 				});
-		$('.Scoreboard-score>span').html(this.pipeTop.points-1);
-		if(this.pipeTop.points-1 > this.highScore) {
-			this.highScore = this.pipeTop.points-1;
+		$('.Scoreboard-score>span').html(this.player.points-1);
+		if(this.player.points-1 > this.highScore) {
+			this.highScore = this.player.points-1;
 		}
 		$('.Scoreboard-highscore>span').html(this.highScore);
 	};
