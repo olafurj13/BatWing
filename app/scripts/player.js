@@ -29,7 +29,7 @@ window.Player = (function() {
 
 	Player.prototype.onFrame = function(delta, gameStarted) {
 		if(gameStarted){
-			if(Controls.isJumping){
+			if(Controls.keys.space){
 				this.pos.y -= 1.2;
 			}else {
 				this.pos.y += 0.9;
