@@ -28,9 +28,9 @@ window.Player = (function() {
 
 	Player.prototype.onFrame = function(delta) {
 		if (Controls.keys.space) {
-			this.pos.y -= 1.2;
+			this.pos.y -= 0.4;
 		}else {
-			this.pos.y += 0.9;
+			this.pos.y += 0.4;
 		}
 
 		this.checkCollisionWithBounds();
