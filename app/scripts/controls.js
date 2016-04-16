@@ -7,10 +7,7 @@ window.Controls = (function() {
      */
     var KEYS = {
         32: 'space',
-        37: 'left',
         38: 'up',
-        39: 'right',
-        40: 'down'
     };
     /**
      * A singleton class which abstracts all player input,
@@ -20,6 +17,7 @@ window.Controls = (function() {
      */
     var Controls = function() {
         this._didJump = false;
+        this.isJumping = false;
         this.keys = {};;
         $(window)
             .on('keydown', this._onKeyDown.bind(this))
@@ -31,6 +29,11 @@ window.Controls = (function() {
         // Only jump if space wasn't pressed.
         if (e.keyCode === 32 && !this.keys.space) {
             this._didJump = true;
+            this.isJumping = true;
+            var that = this;
+            setTimeout(function (){
+                that.isJumping = false;
+            }, 100);
             
         }
 

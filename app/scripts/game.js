@@ -23,6 +23,8 @@ window.Game = (function() {
 		//this.pipe = new window.Pipe(this.el.find('Pipe'), this, 1);
 		this.isPlaying = false;
 
+		this.gameStarted = false;
+
 		//var fontSize = Math.min(
 		//	window.innerWidth / 102.4,
 		//	window.innerHeight / 57.6
@@ -48,12 +50,16 @@ window.Game = (function() {
 				delta = now - this.lastFrame;
 		this.lastFrame = now;
 
+		if(Controls.keys.up || Controls.keys.space){
+			this.gameStarted = true;
+		}
+
 		// Update game entities.
-		this.player.onFrame(delta);
+		this.player.onFrame(delta, this.gameStarted);
 		this.ground.onFrame(delta);
 		this.cloud.onFrame(delta);
-		this.pipeTop.onFrame(delta);
-		this.pipeBottom.onFrame(delta);
+		this.pipeTop.onFrame(delta, this.gameStarted);
+		this.pipeBottom.onFrame(delta, this.gameStarted);
 		//this.pipeTop2.onFrame(delta-0.2);
 		//this.pipeBottom2.onFrame(delta-0.2);
 		//this.pipe.onFrame(delta);
@@ -78,6 +84,7 @@ window.Game = (function() {
 	 * Resets the state of the game so a new game can be started.
 	 */
 	Game.prototype.reset = function() {
+		this.gameStarted = false;
 		this.player.reset();
 		this.pipeTop.reset();
 		this.pipeBottom.reset();
