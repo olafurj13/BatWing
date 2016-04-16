@@ -39,6 +39,9 @@ window.Controls = (function() {
 
         // Remember that this button is down.
         if (e.keyCode in KEYS) {
+            var flap = document.getElementById('flapMusic');
+                flap.volume = 0.1;
+                $('#flapMusic').trigger('play');
             var keyName = KEYS[e.keyCode];
             this.keys[keyName] = true;
             return false;

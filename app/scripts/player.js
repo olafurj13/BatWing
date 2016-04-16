@@ -36,10 +36,7 @@ window.Player = (function() {
 				this.pos.y += 0.4;
 			}
 		} else {
-			//this will make rayman float in the air if he has not started
-
 			var start = this.game.WORLD_HEIGHT/2 + 3;
-
 		}
 
 		this.checkCollisionWithBounds();
