@@ -10,6 +10,7 @@ window.Player = (function() {
 	var HEIGHT = 5;
 	var INITIAL_POSITION_X = 30;
 	var INITIAL_POSITION_Y = 25;
+	var op = "+";
 
 	var Player = function(el, game) {
 		this.el = el;
@@ -26,11 +27,19 @@ window.Player = (function() {
 		this.pos.y = INITIAL_POSITION_Y;
 	};
 
-	Player.prototype.onFrame = function(delta) {
-		if (Controls.keys.space) {
-			this.pos.y -= 0.4;
-		}else {
-			this.pos.y += 0.4;
+
+	Player.prototype.onFrame = function(delta, gameStarted) {
+		if(gameStarted){
+			if(Controls.keys.space){
+				this.pos.y -= 0.4;
+			}else {
+				this.pos.y += 0.4;
+			}
+		} else {
+			//this will make rayman float in the air if he has not started
+
+			var start = this.game.WORLD_HEIGHT/2 + 3;
+
 		}
 
 		this.checkCollisionWithBounds();

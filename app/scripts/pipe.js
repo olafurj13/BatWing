@@ -64,8 +64,10 @@ window.Pipe = (function() {
 		this.points++;
 	}
 
-	Pipe.prototype.onFrame = function(delta) {
-		this.pos.x -= delta * SPEED;
+	Pipe.prototype.onFrame = function(delta, gameStarted) {
+		if(gameStarted){
+			this.pos.x -= delta * SPEED;
+		}
 		//console.log(this.pos.x);
 		if(this.pos.x < -3.5){
 			counter++;
