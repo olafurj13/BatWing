@@ -16,6 +16,7 @@ window.Player = (function() {
 		this.el = el;
 		this.game = game;
 		this.pos = { x: 0, y: 0 };
+		this.points = 0;
 		
 	};
 
@@ -25,6 +26,8 @@ window.Player = (function() {
 	Player.prototype.reset = function() {
 		this.pos.x = INITIAL_POSITION_X;
 		this.pos.y = INITIAL_POSITION_Y;
+		this.points = 0;
+		$('.score').html(this.score);
 	};
 
 	Player.prototype.onFrame = function(delta, gameStarted) {

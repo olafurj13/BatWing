@@ -39,6 +39,27 @@
 	-webkit-transform: none;
 }
 
+.score {
+	position: absolute;
+	top: 0.5em;
+	left: 1em;
+	font-size: 5em;
+}
+
+.Scoreboard-score {
+	position: absolute;
+	top: 2.5em;
+	left: 8em;
+	font-size: 4em;
+}
+
+.Scoreboard-highscore {
+	position: absolute;
+	top: 5.5em;
+	left: 8em;
+	font-size: 4em;
+}
+
 .Scoreboard-restart {
 	margin-top: 20em;
 	font-size: inherit;

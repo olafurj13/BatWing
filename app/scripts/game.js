@@ -17,6 +17,7 @@ window.Game = (function() {
 		this.pipeBottom = new window.Pipe(this.el.find('.PipeBottom'), this, 2);
 		this.pipeTop2 = new window.Pipe(this.el.find('.PipeTop'), this, 1);
 		this.pipeBottom2 = new window.Pipe(this.el.find('.PipeBottom'), this, 2);
+		this.highScore = 0;
 		//console.log('PipeTop: ', this.pipeTop);
 		//console.log('PipeBottom: ',this.pipeBottom);
 
@@ -106,6 +107,11 @@ window.Game = (function() {
 					scoreboardEl.removeClass('is-visible');
 					that.start();
 				});
+		$('.Scoreboard-score>span').html(this.pipeTop.points-1);
+		if(this.pipeTop.points-1 > this.highScore) {
+			this.highScore = this.pipeTop.points-1;
+		}
+		$('.Scoreboard-highscore>span').html(this.highScore);
 	};
 
 	/**
